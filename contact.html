@@ -1,66 +1,83 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Pieter Pan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pieter Pan — Contact</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand">
-      <img src="assets/logo.png" alt="Pieter Pan logo">
-      <span class="wordmark">Pieter Pan</span>
-    </div>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="handpanles.html">Handpanles</a>
-      <a href="over-mij.html">Over mij</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </header>
 
-  <main>
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <g fill="none" stroke="#1a1a1a" stroke-width="3">
+        <circle cx="50" cy="46" r="30"/>
+        <g stroke-width="5">
+          <line x1="50" y1="6" x2="50" y2="16"/><line x1="50" y1="76" x2="50" y2="86"/>
+          <line x1="10" y1="46" x2="20" y2="46"/><line x1="80" y1="46" x2="90" y2="46"/>
+          <line x1="22" y1="18" x2="29" y2="25"/><line x1="71" y1="67" x2="78" y2="74"/>
+          <line x1="78" y1="18" x2="71" y2="25"/><line x1="29" y1="67" x2="22" y2="74"/>
+        </g>
+      </g>
+      <path d="M50 30 a16 16 0 0 1 0 32 a8 8 0 0 0 0 -16 a8 8 0 0 1 0 -16" fill="#1a1a1a"/>
+      <circle cx="50" cy="38" r="3.4" fill="#fff"/><circle cx="50" cy="54" r="3.4" fill="#1a1a1a"/>
+      <ellipse cx="52" cy="90" rx="20" ry="4" fill="#1a1a1a"/>
+    </svg>
+    <span class="wordmark">Pieter&nbsp;Pan</span>
+  </a>
+  <nav class="main">
+    <a href="index.html">Home</a>
+    <a href="handpanles.html">Handpanles</a>
+    <a href="over-mij.html">Over mij</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
     <h1 class="page-title">Contact opnemen</h1>
 
-    <div class="contact-intro">
-      <p>Heb je interesse of vragen? Klik dan <a href="https://wa.me/31614870796">hier</a> om me een berichtje via WhatsApp te sturen!</p>
+    <div class="lead">
+      <p>Heb je interesse of vragen? Klik dan <a class="inline-link" href="https://wa.me/31614870796">hier</a>
+      om me een berichtje via WhatsApp te sturen!</p>
       <p>Je kunt ook het contactformulier hieronder gebruiken:</p>
     </div>
 
-    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="form-row">
+    <form class="form-card" onsubmit="event.preventDefault(); this.querySelector('.btn-send').textContent='Verzonden!';">
+      <div class="field-row">
         <div class="field">
-          <label for="voornaam">Voornaam</label>
-          <input type="text" id="voornaam" name="voornaam">
+          <label for="fn">Voornaam</label>
+          <input type="text" id="fn" name="voornaam">
         </div>
         <div class="field">
-          <label for="achternaam">Achternaam</label>
-          <input type="text" id="achternaam" name="achternaam">
+          <label for="ln">Achternaam</label>
+          <input type="text" id="ln" name="achternaam">
         </div>
       </div>
       <div class="field">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email">
+        <label for="em">Email</label>
+        <input type="email" id="em" name="email">
       </div>
       <div class="field">
-        <label for="bericht">Schrijf hieronder je bericht</label>
-        <textarea id="bericht" name="bericht"></textarea>
+        <label for="msg">Schrijf hieronder je bericht</label>
+        <textarea id="msg" name="bericht" rows="4"></textarea>
       </div>
       <button type="submit" class="btn-send">Verstuur</button>
     </form>
-  </main>
+  </div>
+</main>
 
-  <footer class="site-footer">
-    <div class="footer-name">Pieter Pan</div>
-    <div>Pieter van Winsen | Noordwijkerhout, the Netherlands | +31 (0) 614870796</div>
-    <div>info@pieterpan.com</div>
-    <div class="socials">
-      <a href="#" aria-label="Instagram">Instagram</a>
-      <a href="#" aria-label="Facebook">Facebook</a>
-      <a href="#" aria-label="YouTube">YouTube</a>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="fname">Pieter Pan</div>
+  <div class="contact-line">Pieter van Winsen&nbsp;|&nbsp;Noordwijkerhout, the Netherlands&nbsp;|&nbsp;+31 (0) 614870796</div>
+  <div class="contact-line">info@pieterpan.com</div>
+  <div class="socials">
+    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-1 .3-1.5 1.6-1.5H17V2.5h-2.6C11.7 2.5 10.5 4 10.5 6.6V9H8.5v3h2V22h3.5v-10H17l.5-3H14z"/></svg></a>
+    <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
+  </div>
+</footer>
+
 </body>
 </html>
